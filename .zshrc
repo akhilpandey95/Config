@@ -81,3 +81,13 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias please='sudo apt-get'
+alias proxyon="export http_proxy='http://1210212111:password@192.168.23.32:3128';export https_proxy='http://1210212111:password@192.168.23.32:3128'"
+alias proxyoff="export http_proxy='';export https_proxy=''"
+alias godown='sudo shutdown -h now'
+alias comeagain='sudo reboot -h now'
+alias code='cd /home/hector/code'
+
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
