@@ -16,6 +16,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'edkolev/promptline.vim'
 Plugin 'Lokaltog/vim-powerline'
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -64,9 +65,9 @@ let g:airline_detect_iminsert=0
 let g:airline_powerline_fonts=1
 let g:airline_mode_map = {
        \ '__' : '-',
-       \ 'n'  : 'Normal',
-       \ 'i'  : 'Insert',
-       \ 'R'  : 'Replace',
+       \ 'n'  : 'NORMAL',
+       \ 'i'  : 'INSERT',
+       \ 'R'  : 'REPLACE',
        \ 'c'  : 'C',
        \ 'v'  : 'V',
        \ 'V'  : 'V',
@@ -76,3 +77,8 @@ let g:airline_mode_map = {
        \ '^S' : 'S',
        \ }
 
+silent! nmap <C-s> :NERDTreeToggle<CR>
+nmap <silent> <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
+
+let g:NERDTreeMapActivateNode="<F3>"
+let g:NERDTreeMapPreview="<F4>"
