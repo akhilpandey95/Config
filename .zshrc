@@ -78,19 +78,23 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
 alias please='sudo apt-get'
-alias proxyon="export http_proxy='http://1210212111:password@192.168.23.32:3128';export https_proxy='http://1210212111:password@192.168.23.32:3128'"
+alias proxy31="export http_proxy='http://1210212111:password@192.168.23.31:3128';export https_proxy='http://1210212111:password@192.168.23.31:3128'"
+alias proxy32="export http_proxy='http://1210212111:password@192.168.23.32:3128';export https_proxy='http://1210212111:password@192.168.23.32:3128'"
 alias proxyoff="export http_proxy='';export https_proxy=''"
+alias gitproxoff="git config --global http.proxy ''; git config --global https.proxy ''"
+alias gitproxon="git config --global http.proxy http://1210212111:password@192.168.23.32:3128;git config --global https.proxy https://1210212111:password@192.168.23.32:3128"
+alias npmproxoff="npm config delete proxy;npm config delete https-proxy"
+alias npmproxon="npm config set proxy http://1210212111:password@192.168.23.32:3128;npm config set https-proxy http://1210212111:password@192.168.23.32:3128"
 alias godown='sudo shutdown -h now'
 alias comeagain='sudo reboot -h now'
 alias code='cd /home/hector/code'
 alias tor='/home/hector/tor-browser_en-US && ./start-tor-browser.desktop'
 alias sv='sudo vim'
+alias gusac='ssh gusac@172.17.38.29 -p 2022'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-## NOTE : The proxyon and proxyoff are specific to my system so they are not useful for a system that is not behind a proxy, although if behind a proxy please change the needed.
