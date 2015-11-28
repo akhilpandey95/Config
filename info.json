@@ -1,0 +1,21 @@
+// NOTE : The list is based on my requirements although if you need any of // the below mentioned apps, please keep them
+title : "The list of KDE based default applications that can be removed on choice if you donot wish to bloat your RAM"
+{
+        app-01 : "Kmail import",
+        app-02 : "arka",
+        app-03 : "dragon player",
+        app-04 : "skanlite",
+        app-05 : "gwenview",
+        app-06 : "okular",
+        app-07 : "KAaddressbook",
+        app-08 : "Korganizer",
+        app-09 : "Kontact",
+        app-10 : "kde partition editor",
+        app-11 : "blue devil",
+        app-12 : "Akgregator",
+        app-13 : "Konversation",
+        app-14 : "IM contact",
+        app-15 : "ksshaskpass",
+        app-16 : "klipperboardtool",
+        app-17 : "krdc"
+}
