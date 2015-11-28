@@ -95,6 +95,12 @@ alias code='cd /home/hector/code'
 alias tor='/home/hector/tor-browser_en-US && ./start-tor-browser.desktop'
 alias sv='sudo vim'
 alias gusac='ssh gusac@172.17.38.29 -p 2022'
+alias i='cd /home/hector && ./init'
+alias up='sudo apt-get update'
+alias ug='sudo apt-get upgrade'
+alias srm='sudo rm -r'
+alias netstop='sudo service network-manager stop'
+alias netstrt='sudo service network-manager start'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
