@@ -1,0 +1,17 @@
+echo "Initialising the script"
+echo "Complete battery saving mode"
+#unecessary services and 
+#sudo iwconfig wlan0 txpower off
+#sudo iwconfig wlan0 txpower on
+#sudo vim /proc/sys/vm/laptop_mode (set value from 0 to 5)
+#sudo service network-manger stop
+sudo service nginx stop
+#sudo service mysql stop
+sudo service rethinkdb stop
+#sudo service mongodb stop
+#sudo service hostapd stop
+sudo service bluetooth stop
+sudo service lightdm stop
+free -m | grep Mem
+#gnome-system-monitor
+echo "ending the script"
