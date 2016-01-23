@@ -101,6 +101,8 @@ alias ug='sudo apt-get upgrade'
 alias srm='sudo rm -r'
 alias netstop='sudo service network-manager stop'
 alias netstrt='sudo service network-manager start'
+alias envon = 'source .env/bin/activate'
+alias envoff = 'deactivate'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
