@@ -27,6 +27,7 @@ set laststatus=2
 set encoding=utf-8
 set ttimeoutlen=50
 set number
+set paste
 set ignorecase
 set smartcase
 set magic
