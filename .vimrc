@@ -4,14 +4,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 Plugin 'moll/vim-node'
+Plugin 'fatih/vim-go'
 Plugin 'bling/vim-airline'
 Plugin 'edsono/vim-matchit'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'drmingdrmer/xptemplate'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'edkolev/promptline.vim'
@@ -19,19 +20,30 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
-filetype plugin indent on
-set expandtab
+
+set number
 set ruler
+set magic
+set showmatch
+set smartcase
+set ignorecase
+set ai
+set autoindent
+set si
+set smartindent
+set cindent
+set smarttab
+set wrap
+set expandtab ts=4 sw=4 ai
+set softtabstop=4
 set t_Co=256
 set laststatus=2
 set encoding=utf-8
 set ttimeoutlen=50
-set number
-set paste
-set ignorecase
-set smartcase
-set magic
-set showmatch
+filetype on
+filetype plugin on
+filetype indent on
+
 syntax enable	
 colorscheme 256-grayvim
 if has("gui_running")
@@ -40,7 +52,21 @@ if has("gui_running")
 	set t_Co=256
 	set guitablabel=%M\ %t
 endif
-set smarttab
+
+let g:xptemplate_brace_complete = '([{'
+
+" Go Specific vim config [Start]
+let g:go_higlight_functions = 1
+let g:go_highlight_methods = 1
+let g:highlight_structs = 1
+let g:highlight_interfaces = 1
+let g:highlight_operators = 1
+let g:highlight_build_constraints = 1
+let g:go_play_open_browser = 0
+let g:go_fmt_fail_silently = 1
+" Go Specific vim config [Stop]
+
+let g:Powerline_symbols = 'fancy'
 let g:promptline_preset = 'full'
 let g:promptline_theme = 'airline'
 if has ('win32')
