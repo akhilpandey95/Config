@@ -14,6 +14,9 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'drmingdrmer/xptemplate'
 Plugin 'kien/ctrlp.vim'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
 Plugin 'edkolev/promptline.vim'
 Plugin 'Lokaltog/vim-powerline'
@@ -44,7 +47,7 @@ filetype on
 filetype plugin on
 filetype indent on
 
-syntax enable	
+syntax enable
 colorscheme 256-grayvim
 if has("gui_running")
 	set guioptions-=T
@@ -53,7 +56,7 @@ if has("gui_running")
 	set guitablabel=%M\ %t
 endif
 
-let g:xptemplate_brace_complete = '([{'
+let g:xptemplate_brace_complete = '([{<"'
 
 " Go Specific vim config [Start]
 let g:go_higlight_functions = 1
@@ -66,6 +69,14 @@ let g:go_play_open_browser = 0
 let g:go_fmt_fail_silently = 1
 " Go Specific vim config [Stop]
 
+" Javascript Specific vim config [start]
+let g:used_javascript_libs = 'jquery,angularjs,angularui,angularuirouter,react,requirejs,handlebars'
+let g:javascript_enable_domhtmlcss = 1
+
+" Javascript Specific vim config [stop]
+
+let g:better_whitespace_verbosity=1
+highlight ExtraWhitespace ctermbg=red
 let g:Powerline_symbols = 'fancy'
 let g:promptline_preset = 'full'
 let g:promptline_theme = 'airline'

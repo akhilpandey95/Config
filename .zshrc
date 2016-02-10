@@ -47,14 +47,16 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git github-flow battery themes wakeonlan lighthouse )
+plugins=(git github-flow web-search pip node npm jsontools catimg )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export GOROOT="$HOME/golang/go"
+export GOPATH="$GOROOT/packages"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$GOROOT/bin:$GOPATH/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -63,7 +65,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  else
-   export EDITOR='mvim'
+   export EDITOR='vim'
  fi
 
 # Compilation flags
@@ -101,8 +103,6 @@ alias ug='sudo apt-get upgrade'
 alias srm='sudo rm -r'
 alias netstop='sudo service network-manager stop'
 alias netstrt='sudo service network-manager start'
-alias envon = 'source .env/bin/activate'
-alias envoff = 'deactivate'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

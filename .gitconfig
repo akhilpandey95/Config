@@ -1,0 +1,8 @@
+[http]
+	proxy = http://1210212111:password@192.168.23.32:3128
+[https]
+	proxy = https://1210212111:password@192.168.23.32:3128
+[user]
+	email = akhilhector.1@gmail.com
+	name = AkhilHector
+	signingkey = 7D141DAF
