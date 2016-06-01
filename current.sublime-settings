@@ -1,0 +1,27 @@
+{
+    "Seti_orange_button": true,
+    "Seti_sb_tree_tiny": true,
+    "Seti_sidebar_font_Source": true,
+    "Seti_sidebar_font_size_10": true,
+    "Seti_tab_font_10": true,
+    "Seti_tabs_no_min_width": true,
+    "Seti_pad_5": true,
+    "Seti_tabs_small": true,
+    "bold_folder_labels": true,
+    "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+    "font_options": "subpixel_antialias",
+    "font_size": 8,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "spacegray_sidebar_font_small": true,
+    "spacegray_sidebar_tree_small": true,
+    "spacegray_tabs_auto_width": true,
+    "spacegray_tabs_font_small": true,
+    "spacegray_tabs_normal": true,
+    "tab_completion": false,
+    "tab_size": 4,
+    "theme": "Seti_orig.sublime-theme"
+}
+
