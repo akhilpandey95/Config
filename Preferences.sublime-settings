@@ -1,0 +1,19 @@
+{
+    "bold_folder_labels": true,
+    "color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
+    "font_options": "subpixel_antialias",
+    "font_size": 8,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "spacegray_sidebar_font_small": true,
+    "spacegray_sidebar_tree_small": true,
+    "spacegray_tabs_auto_width": true,
+    "spacegray_tabs_font_small": true,
+    "spacegray_tabs_normal": true,
+    "tab_completion": false,
+    "tab_size": 4,
+    "theme": "Spacegray Eighties.sublime-theme"
+}
+
