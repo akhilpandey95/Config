@@ -1,17 +1,39 @@
+sudo -i
 echo "Initialising the script"
 echo "Complete battery saving mode"
-#unecessary services and 
-#sudo iwconfig wlan0 txpower off
-#sudo iwconfig wlan0 txpower on
-#sudo vim /proc/sys/vm/laptop_mode (set value from 0 to 5)
-#sudo service network-manger stop
-sudo service nginx stop
-#sudo service mysql stop
-sudo service rethinkdb stop
-#sudo service mongodb stop
-#sudo service hostapd stop
-sudo service bluetooth stop
-sudo service lightdm stop
+tlp start
+xset -dpms
+xset s off
+xset s noblank
+service nginx stop
+service rethinkdb stop
+pm-powersave true
+service mongodb stop
+service bluetooth stop
+iwconfig wlan0 txpower off
+echo 160 > /sys/class/backlight/intel_backlight/brightness
+echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo
+echo Y > /sys/module/snd_hda_intel/parameters/power_save_controller
+echo min_power > /sys/class/scsi_host/host0/link_power_management_policy
+echo min_power > /sys/class/scsi_host/host1/link_power_management_policy
+echo min_power > /sys/class/scsi_host/host2/link_power_management_policy
+gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_blink_mode off
 free -m | grep Mem
-#gnome-system-monitor
 echo "ending the script"
+
+#Commented parts
+
+#gnome-system-monitor
+#sudo service mysql stop
+#sudo service hostapd stop
+#sudo iwconfig wlan0 txpower on
+#sudo service network-manger stop
+#sudo vim /proc/sys/vm/laptop_mode (set value from 0 to 5)
+#echo 0 > /sys/devices/system/cpu/intel_pstate/no_turbo
+#echo N > /sys/module/snd_hda_intel/parameters/power_save_controller
+#echo max_performance > /sys/class/scsi_host/host0/link_power_management_policy
+#echo max_performance > /sys/class/scsi_host/host0/link_power_management_policy
+#echo max_performance > /sys/class/scsi_host/host0/link_power_management_policy
+
+# Some trivia about linux system
+# /etc/udev/write_net_rules is the place where your network card's powersaving mode is to be specified
