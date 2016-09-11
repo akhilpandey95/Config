@@ -5,9 +5,10 @@ tlp start
 xset -dpms
 xset s off
 xset s noblank
+rmmod asus_nb_wmi
+pm-powersave true
 service nginx stop
 service rethinkdb stop
-pm-powersave true
 service mongodb stop
 service bluetooth stop
 iwconfig wlan0 txpower off
@@ -37,3 +38,8 @@ echo "ending the script"
 
 # Some trivia about linux system
 # /etc/udev/write_net_rules is the place where your network card's powersaving mode is to be specified
+
+# Killing node web services/applications
+# fuser PORT_NUMBER/tcp
+# lsof -i tcp:PORT_NUMBER
+# fuser -k PORT_NUMBER/tcp
