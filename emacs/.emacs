@@ -17,6 +17,7 @@
    (quote
     ("c9ddf33b383e74dac7690255dd2c3dfa1961a8e8a1d20e401c6572febef61045" "551596f9165514c617c99ad6ce13196d6e7caa7035cea92a0e143dbe7b28be0e" default)))
  '(display-battery-mode t)
+ '(display-time-mode t)
  '(electric-pair-mode t)
  '(menu-bar-mode nil)
  '(midnight-mode t)
@@ -26,16 +27,16 @@
      ("melpa" . "http://melpa.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (csv-mode ample-theme abyss-theme haskell-emacs image-dired+ switch-window lisp-extra-font-lock auto-auto-indent ace-window pdf-tools haskell-mode go-mode rust-mode)))
+    (zoom-window csv-mode ample-theme abyss-theme haskell-emacs image-dired+ switch-window lisp-extra-font-lock auto-auto-indent ace-window pdf-tools haskell-mode go-mode rust-mode)))
  '(pdf-view-use-scaling t)
  '(scroll-bar-mode nil)
- '(setq default-tab-width 4)
- '(setq tab-width 4)
- '(setq-default indent-tabs-mode nil)
+ '(setq tab-width t)
+ '(setq-default indent-tabs-mode t)
  '(tool-bar-mode nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+
+;; global keys for zoom window
+(require 'zoom-window)
+(global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
+
+
