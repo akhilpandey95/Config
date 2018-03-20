@@ -39,3 +39,7 @@
 (global-set-key [M-right] 'windmove-right)
 (global-set-key [M-up] 'windmove-up)
 (global-set-key [M-down] 'windmove-down)
+
+;; global keys for splitting the windows
+(global-set-key (kbd "C-x %") 'split-window-horizontally)
+(global-set-key (kbd "C-x *") 'split-window-vertically)
