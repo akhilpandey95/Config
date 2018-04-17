@@ -13,7 +13,11 @@
     ("c9ddf33b383e74dac7690255dd2c3dfa1961a8e8a1d20e401c6572febef61045" "551596f9165514c617c99ad6ce13196d6e7caa7035cea92a0e143dbe7b28be0e" default)))
  '(display-battery-mode t)
  '(display-time-mode t)
+ '(doc-view-ghostscript-options
+   (quote
+    ("-NOSAFER" "-dNOPAUSE" "-sDEVICE=png16m" "-dTextAlphaBits=4" "-dBATCH" "-dGraphicsAlphaBits=4" "-dQUIET")))
  '(electric-pair-mode t)
+ '(indent-tabs-mode nil)
  '(menu-bar-mode nil)
  '(midnight-mode t)
  '(package-archives
@@ -25,9 +29,8 @@
     (zoom-window csv-mode ample-theme abyss-theme haskell-emacs image-dired+ switch-window lisp-extra-font-lock auto-auto-indent ace-window pdf-tools haskell-mode go-mode rust-mode)))
  '(pdf-view-use-scaling t)
  '(scroll-bar-mode nil)
- '(setq tab-width t)
- '(setq-default indent-tabs-mode t)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(winner-mode t))
 
 
 ;; global keys for zoom window
@@ -43,3 +46,11 @@
 ;; global keys for splitting the windows
 (global-set-key (kbd "C-x %") 'split-window-horizontally)
 (global-set-key (kbd "C-x *") 'split-window-vertically)
+
+;; global keys for linum mode
+(global-set-key (kbd "C-x #") 'linum-mode)
+
+;; indentation
+(setq default-tab-width 4)
+(setq tab-width 4)
+(setq-default indent-tabs-mode nil)
